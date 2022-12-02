@@ -116,7 +116,7 @@ export const actions = {
 					carbs_grams: nutritionData.carbs_grams,
 					protein_grams: nutritionData.protein_grams,
 					kkcals: nutritionData.kkcals,
-					imageBase64: imageBase64
+					imageBase64: "" //imageBase64
 				},
 			})
 		}
