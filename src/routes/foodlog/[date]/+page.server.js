@@ -49,7 +49,12 @@ async function loadData(date) {
 		}
 	});
 
-	allFoods = await prisma.foodReference.findMany();
+	allFoods = await prisma.foodReference.findMany({
+		select: {
+			food_name: true,
+			food_qty: true,
+		  },
+	});
 
 	targetTotals = await prisma.targetTotals.findFirst({
 		where: {
