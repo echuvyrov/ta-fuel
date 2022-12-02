@@ -107,7 +107,7 @@ export const actions = {
 			// look up food on OpenAI
 			var nutritionData = await NutritionSmartAIThingie.askForJSON(food);
 			//add the food to the foodReference table if it doesn't exist
-			var imageBase64 = await NutritionSmartAIThingie.generateImage(food);
+			//var imageBase64 = await NutritionSmartAIThingie.generateImage(food);
 			const newFoodReferenceEntry = await prisma.foodReference.create({
 				data: {
 					food_name: nutritionData.food_name,
