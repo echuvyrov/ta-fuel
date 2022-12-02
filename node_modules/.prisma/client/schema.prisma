@@ -1,0 +1,44 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["referentialIntegrity"]
+}
+
+datasource db {
+  provider             = "mysql"
+  url                  = env("DATABASE_URL")
+  referentialIntegrity = "prisma"
+}
+
+model FoodLog {
+  id            String   @id @default(uuid())
+  food_name     String
+  food_qty      Float
+  protein_grams Float
+  fat_grams     Float
+  carbs_grams   Float
+  kkcals        Float
+  feeding_date  String
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @default(now())
+}
+
+model FoodReference {
+  id            String   @id @default(uuid())
+  food_name     String
+  food_qty      Float
+  protein_grams Float
+  fat_grams     Float
+  carbs_grams   Float
+  kkcals        Float
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @default(now())
+  imageBase64   String @db.LongText
+}
+
+model TargetTotals {
+  id            String   @id @default(uuid())
+  feeding_date  String
+  fat_grams     Float
+  carbs_grams   Float
+  protein_grams Float
+}

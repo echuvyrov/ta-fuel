@@ -1,0 +1,33 @@
+{
+	"name": "trackmyfood",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch",
+		"test": "playwright test"
+	},
+	"devDependencies": {
+		"@fontsource/fira-mono": "^4.5.0",
+		"@neoconfetti/svelte": "^1.0.0",
+		"@playwright/test": "^1.25.0",
+		"@sveltejs/adapter-auto": "next",
+		"@sveltejs/kit": "next",
+		"@types/cookie": "^0.5.1",
+		"prisma": "^4.6.1",
+		"svelte": "^3.46.0",
+		"svelte-check": "^2.7.1",
+		"svelte-loading-spinners": "^0.3.4",
+		"svelte-typeahead": "^4.4.1",
+		"typescript": "^4.7.4",
+		"vite": "^3.1.0"
+	},
+	"type": "module",
+	"dependencies": {
+		"@budibase/svelte-ag-grid": "^1.0.4",
+		"@prisma/client": "^4.6.1",
+		"ag-grid-community": "^28.2.1"
+	}
+}
